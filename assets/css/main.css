@@ -1,0 +1,7 @@
+@import './type.css';
+@import './ghost.css';
+
+body {
+    background-color: white;
+    max-width: 40rem;
+}

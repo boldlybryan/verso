@@ -1,0 +1,20 @@
+{{!< default}}
+
+{{#page}}
+
+<article class="{{post_class}}">
+  <header>
+    <h1>{{title}}</h1>
+  </header>
+  <section>
+    {{content}}
+  </section>
+  <section>
+  {{#if comments}}
+    <h2>Comments ({{comment_count singular="" plural=""}})</h2>
+    {{comments title="" count=false mode="light" saturation=80}}
+  {{/if}}
+  </section>
+</article>
+
+{{/page}}

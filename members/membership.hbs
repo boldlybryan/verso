@@ -1,0 +1,36 @@
+{{!< ../default}}
+
+    {{#if @member.paid}}
+
+        {{!-- Logged in, paying member: Redirect home --}}
+        <p>You're already a member!</p>
+
+    {{else}}
+
+        {{!-- Logged in, not paying: Check out --}}
+        <div>
+            <h1>Become a member!</h1>
+            <p>Unlock full access to {{@site.title}} and see the entire library of members-only content & updates</p>
+            {{#get "tiers" include="monthly_price,yearly_price,benefits" limit="all" as |tiers|}}
+                {{! Loop through our tiers collection }}
+                {{#foreach tiers}}
+                    <h2>{{name}}</h2>
+                    {{#if benefits}}
+                        {{#foreach benefits as |benefit|}}
+                            {{benefit}}
+                        {{/foreach}}
+                    {{/if}}                      
+                    {{#if monthly_price}}
+                        <div>
+                            <a href="javascript:" data-portal="signup/{{id}}/monthly">Monthly – {{price monthly_price currency=currency}}</a>
+                        </div>
+                    {{/if}}
+                    {{#if yearly_price}}
+                        <div>
+                            <a href="javascript:" data-portal="signup/{{id}}/yearly">Yearly – {{price yearly_price currency=currency}}</a>
+                        </div>
+                    {{/if}}                                    
+                {{/foreach}}
+            {{/get}}
+        </div>  
+    {{/if}}

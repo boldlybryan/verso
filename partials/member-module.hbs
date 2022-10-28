@@ -1,0 +1,12 @@
+<ul>
+    <li>
+        {{#if @member}}
+        <a href="javascript:" data-members-signout>Sign out</a>
+        {{else}}
+        <form data-members-form="signin">
+            <input data-members-email type="email" required="true"/>
+            <button type="submit">Sign in</button>
+        </form>
+        {{/if}}        
+    </li>
+</ul>

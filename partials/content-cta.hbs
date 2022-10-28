@@ -1,0 +1,11 @@
+{{{html}}}
+
+<div style="padding: 1rem; border:1px solid;    ">
+    {{#if @member}}
+        <h3>This post is for paying subscribers only</h3>
+    {{else}}
+        <h3>This post is for subscribers only</h3>
+        {{/if}}
+    <a class="button large primary" href="/signup/">Subscribe now</a>
+    <p>Already have an account? <a href="/signin/">Sign in</a></p>
+</div>

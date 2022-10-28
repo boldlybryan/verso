@@ -1,0 +1,16 @@
+{
+  "name": "untitled",
+  "version": "1.0.0",
+  "description": "Ghost theme for bryanking.blog",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "zip": "zip -r untitled-theme.zip * -x '*.zip'"
+  },
+  "author": {
+    "name": "Bryan King",
+    "email": "bryan@overbold.com"
+  },
+  "keywords": ["ghost-theme"],
+  "license": "MIT"
+}
