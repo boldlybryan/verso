@@ -115,3 +115,7 @@ footer .nav li:not(:last-of-type) {
 .pagination {
     margin-top: 2rem;
 }
+
+.content {
+    margin-top: 0.5rem;
+}

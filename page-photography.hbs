@@ -1,0 +1,27 @@
+{{!< default}}
+
+<link rel="stylesheet" href="{{asset 'css/pages/photography.css'}}">
+
+{{#post}}
+
+<article class="{{post_class}} {{visibility}} {{#foreach tiers}}{{slug}} {{/foreach}}">
+  <header>
+    <h1>{{title}}</h1>
+    {{#has visibility="paid"}}
+      <span class="premium-label">Premium</span>
+    {{/has}}
+    {{#foreach tiers}}{{log this}} {{/foreach}}
+  </header>
+  <section class="content">
+    {{content}}
+  </section>
+  <section>
+  {{#if comments}}
+    <h2>Comments</h2>
+    {{comment_count}}
+    {{comments title="" count=false mode="light"}}
+  {{/if}}
+  </section>
+</article>
+
+{{/post}}

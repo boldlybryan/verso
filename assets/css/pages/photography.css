@@ -1,0 +1,16 @@
+
+.page-photography main {
+    grid-column: 2 / span 3;
+}
+
+.page-photography .content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px,1fr));
+    grid-gap: 0.5rem;
+}
+
+@media screen and (max-width: 64rem){
+    .page-photography main {
+        grid-column: 1 / span 3;
+    }
+}
