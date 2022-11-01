@@ -35,3 +35,8 @@ There are a couple of modifications to make to ```config.development.json```:
 This theme uses it's own pages instead of Ghost Portal for sign in, sign up, and account management. The template files can be found in ```/members```, and you'll need to upload ```routes.yaml``` inside Ghost, under the ```Advanced > Labs``` settings page. Official docs: [https://ghost.org/docs/themes/members/].
 
 Additionally, you should turn on Stripe's test mode. It can be activated by going into the Portal settings and clicking ```connect to stripe``` under signup options. this will redirect you to stripe, and when you're there you just need to skip the signup flow to connect test mode. Then, you can add a complimentary subscription to a test user account to simulate what a paying customer will see.
+
+## FUNHOUSE
+
+List of ideas
+* Spotify now playist

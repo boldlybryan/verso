@@ -1,4 +1,48 @@
 html {
     font-size: 16px;
-    font-family: Georgia, serif;
+    font-family: 'Gill Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+p + h1,
+p + h2,
+p + h3 {
+    margin-top: 2rem;
+}
+
+h1 + p,
+h2 + p,
+h3 + p {
+    margin-top: 0.2 5rem !important;
+}
+
+h1 {
+    font-size: 1.67rem;
+}
+
+h2 {
+    font-size: 1.33rem;
+}
+
+h3 {
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+p:not(:first-of-type){
+    margin-top: 1rem;
+}
+
+pre {
+    border: 1px solid;
+    padding: 0.25rem;
+}
+
+code {
+    font-family: monospace;
 }

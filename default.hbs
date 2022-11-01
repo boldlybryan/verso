@@ -9,15 +9,13 @@
     <script type="module" src="/assets/js/main.js"></script>
     {{ghost_head}}
 </head>
-<body>
+<body class="{{body_class}}">
 
-    <header>
-    <h1>{{@site.title}}</h1>
-    <p>{{@site.description}}</p>
-    {{navigation}}
-    </header>
+    {{>'site-header'}}
 
-    {{{body}}}
+    <main>
+        {{{body}}}
+    </main>
 
     <footer>
         {{navigation type="secondary"}}

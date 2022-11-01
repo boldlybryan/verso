@@ -1,7 +1,117 @@
+@import './reset.css';
 @import './type.css';
 @import './ghost.css';
 
 body {
     background-color: white;
-    max-width: 40rem;
+    padding: 5rem 4rem;
+}
+
+@media screen and (max-width:80rem){
+    body {
+        padding: 2.5rem 2rem;
+    }
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.site-header {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
+
+.site-header .logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.site-header .nav li {
+    display: block;
+}
+
+.site-header .nav li:not(:last-of-type) {
+    margin-right: 0.5rem;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr minmax(422px, 1fr) 1fr 1fr;
+    grid-gap: 1.5rem;
+}
+
+@media screen and (max-width: 64rem){
+    body {
+        grid-template-columns: 1fr minmax(422px,1fr) 1fr;
+    }
+}
+
+@media screen and (max-width: 64rem){
+    body {
+        grid-template-columns: minmax(422px, 1fr) 1fr;
+    }
+}
+
+.site-header {
+    grid-column: 1;
+    grid-row: 1 / -1;
+}
+
+main {
+    grid-column: 2 / span 1;
+}
+
+footer {
+    grid-column: 2 / span 2;
+    border-top: 1px solid;
+    padding-top: 1rem;
+}
+
+footer li {
+    display: inline-block;
+}
+
+footer .nav li:not(:last-of-type) {
+    margin-right: 1rem;
+}
+
+@media screen and (max-width: 64rem){
+    .site-header {
+        grid-column: 1 / -1;
+        grid-row: 1;
+    }
+
+    main {
+        grid-column: 1 ;
+    }
+
+    footer {
+        grid-column: 1 / span 2;
+    }
+}
+
+@media screen and (max-width: 45rem){
+    body {
+        grid-template-columns: 1fr;
+    }
+}
+
+.index .post:not(:first-of-type){
+    margin-top: 4rem;
+}
+
+.index .post .meta {
+    margin: 0.25rem 0 1rem 0;
+} 
+
+.index .post .permalink {
+    display: block;
+    margin-top: 1rem;
+}
+
+.pagination {
+    margin-top: 2rem;
 }
