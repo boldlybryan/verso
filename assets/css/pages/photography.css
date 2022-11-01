@@ -14,3 +14,7 @@
         grid-column: 1 / span 3;
     }
 }
+
+.kg-image-card:not(.kg-card-hascaption)+.kg-image-card {
+    margin-top: 0;
+}
