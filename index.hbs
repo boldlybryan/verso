@@ -4,16 +4,19 @@
   <!-- This is the post loop - each post will be output using this markup -->
   {{#foreach posts}}
   <article class="{{post_class}} {{visibility}}">
-        <h2><a href="{{url}}">{{title}}</a></h2>
-        {{> "publish-stamp"}}
-        {{#has visibility="paid"}}
-          <span class="premium-label">Premium</span>
-        {{/has}}
-        <section>
-            <p>{{excerpt}}</p>
-            <a href="{{url}}" class="permalink">Permalink</a>
-        </section>
-    </article>
+    {{#if feature_image}}
+        <img src="{{img_url feature_image}}">
+    {{/if}}
+    <h2><a href="{{url}}">{{title}}</a></h2>
+    {{> "publish-stamp"}}
+    {{#has visibility="paid"}}
+      <span class="premium-label">Premium</span>
+    {{/has}}
+    <section>
+        <p>{{excerpt}}</p>
+        <a href="{{url}}" class="permalink">Permalink</a>
+    </section>
+  </article>
   {{/foreach}}
   {{pagination}}
 </div>
