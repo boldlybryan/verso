@@ -191,40 +191,40 @@ hr:after {
     font-size: 0.75rem;
 }
 
-[data-members-form="signup"].loading .signup-box {
+[data-members-form].loading .signup-box {
     opacity: 0.5;
 }
 
-[data-members-form="signup"].success .signup-box {
+[data-members-form].success .signup-box {
     display: none;
 }
 
-[data-members-form="signup"] .message-box {
+[data-members-form] .message-box {
     display: none;
 }
 
-[data-members-form="signup"].success .login-link {
+[data-members-form].success .login-link {
     display: none;
 }
 
-[data-members-form="signup"].success .message-box,
-[data-members-form="signup"].error .message-box {
+[data-members-form].success .message-box,
+[data-members-form].error .message-box {
     display: block;
 }
 
-[data-members-form="signup"].success .message-box {
+[data-members-form].success .message-box {
     color: darkgreen;
 }
 
-[data-members-form="signup"] .message-box .success-message {
+[data-members-form] .message-box .success-message {
     display: none;
 }
 
-[data-members-form="signup"].success .message-box .success-message {
+[data-members-form].success .message-box .success-message {
     display: block;
 }
 
-[data-members-form="signup"].error input {
+[data-members-form].error input {
     border: 1px solid darkred;
 }
 
