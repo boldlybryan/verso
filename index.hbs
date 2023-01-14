@@ -6,14 +6,15 @@
   <article class="{{post_class}} {{visibility}}">
     {{#if feature_image}}
         <img src="{{img_url feature_image}}">
+        <figcaption>{{feature_image_caption}}</figcaption>
     {{/if}}
     <h2><a href="{{url}}">{{title}}</a></h2>
     {{> "publish-stamp"}}
     {{#has visibility="paid"}}
       <span class="premium-label">Premium</span>
     {{/has}}
-    <section>
-        <p>{{excerpt}}</p>
+    <section class="content">
+        {{content}}
         <a href="{{url}}" class="permalink">Permalink</a>
     </section>
   </article>

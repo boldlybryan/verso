@@ -1,3 +1,21 @@
-.content {
+.post .content p,
+.post .content ul,
+.post .content ol,
+.post .content blockquote {
+    font-family: Georgia, serif;
+    line-height: 1.3;
+}
+
+.post .content blockquote {
     margin-top: 1rem;
+    padding: 1rem;
+    border-left: 1px solid #000;
+    background-color: #eee;
+}
+
+.post figcaption {
+    font-size: 0.875rem;
+    text-align: center;
+    opacity: 0.65;
+    margin-top: 0.25rem;
 }

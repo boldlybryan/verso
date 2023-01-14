@@ -1,5 +1,6 @@
 @import './reset.css';
-@import './type.css?v=1';
+@import './type.css?v=2';
+@import './post.css';
 @import './ghost.css';
 
 body {
@@ -13,9 +14,19 @@ body {
     }
 }
 
+a {
+    color: inherit;
+}
+
 img {
     width: 100%;
     height: auto;
+}
+
+iframe {
+	aspect-ratio: 16 / 9;
+	height: 100%;
+	width: 100%;
 }
 
 .site-header {
@@ -46,6 +57,7 @@ body {
 @media screen and (max-width: 64rem){
     body {
         grid-template-columns: 1fr minmax(422px,1fr) 1fr;
+        padding: 2rem 1rem;
     }
 }
 

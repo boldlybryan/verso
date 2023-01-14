@@ -7,7 +7,8 @@
 <article class="{{post_class}} {{visibility}} {{#foreach tiers}}{{slug}} {{/foreach}}">
   <header>
     {{#if feature_image}}
-        <img src="{{img_url feature_image}}">
+        <img src="{{img_url feature_image}}" alt="{{feature_image_alt}}">
+        <figcaption>{{feature_image_caption}}</figcaption>
     {{/if}}
     <h1>{{title}}</h1>
     {{> "publish-stamp"}}

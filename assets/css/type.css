@@ -4,6 +4,20 @@ html {
     -webkit-font-smoothing: antialiased;
 }
 
+em, i {
+    font-style: italic;
+}
+
+strong, b {
+    font-weight: bold;
+}
+
+hr {
+    border: 1px solid;
+    opacity: 0.25;
+    margin: 1rem 0;
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
     margin-top: 1rem;
