@@ -265,3 +265,11 @@ aside .social p {
 aside .social h4 {
     margin: 0;
 }
+
+.kg-width-wide {
+    width: 100%;
+}
+
+.kg-width-full {
+    width: 100%;
+}
