@@ -149,7 +149,7 @@ hr:after {
     flex-wrap: wrap;
 }
 
-.signup-box input {
+[data-members-form] input {
     display: block;
     width: 100%;
     max-width: 30ch;
@@ -159,7 +159,7 @@ hr:after {
     margin-bottom: 0.5rem;
 }
 
-.signup-box button {
+[data-members-form] button {
     display: block;
     padding: 0.25rem .50rem;
     border-radius: 0;
@@ -167,7 +167,7 @@ hr:after {
     margin-top: 0.75rem;
 }
 
-.signup-box label {
+[data-members-form] label {
     display: inline-block;
     font-size: 0.75rem;
     margin-bottom: 0.25rem;
