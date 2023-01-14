@@ -13,9 +13,72 @@
 
     {{>'site-header'}}
 
-    <main>
-        {{{body}}}
-    </main>
+    <div class="container">
+        <main>
+            {{{body}}}
+        </main>
+        <aside>
+            <div>
+                {{#if @member}}
+                    <h4>Manage your account</h4>
+                    <div class="subscription">
+                        {{#if cancel_at_period_end}}
+                        <p>
+                            <strong class="subscription-expiration-warning">Your subscription will expire on {{date current_period_end format="DD MMM YYYY"}}.</strong> If you change your mind in the mean time you can turn auto-renew back on to continue your subscription.
+                        </p>
+                        {{else}}
+                        <p>
+                            Hey {{@member.firstname}}! You have an active account with access to everything on my website. Shoot me a message if you run into any trouble. Thanks! <br> –Bryan
+                        </p>
+                        {{/if}}
+                            <p>Name: {{@member.name}}</p>
+                            <p>Email: {{@member.email}}</p>
+                            <p>Status: {{@member.status}}</p>
+                            <p>Member since: {{@member.created_at}}</p>
+                            <p><a href="/#/portal/">Edit details</a>, <a href="javascript:" data-members-signout>Sign out</a></p>
+                            <!--{{#if @member.avatar_image}}
+                                <img src="{{@member.avatar_image}}" />
+                            {{else}}
+                                <div class="avatar">B</div>
+                            {{/if}}-->
+                            
+                        </div>
+                        </div>
+                        </div>
+                    </div>               
+                {{else}}
+                    <form data-members-form="signup">
+                        <h4>You've got mail</h4>
+                        <p>Get email notifications whenever I publish something new. Definitely not a newsletter.</p>
+                        <div class="signup-box">
+                            <label for="">Name</label>
+                            <input data-members-name type="name" placeholder="Your name..." required="true" autocomplete="false" />
+                            <label for="">Email Address</label>
+                            <input data-members-email type="email" placeholder="Type your email..." required="true" autocomplete="false" />
+                            <button type="submit">Continue</button>
+                        </div>
+                        <div class="message-box">
+                            <p class="success-message">It worked! Check the email you provided to confirm your subscription.</p>
+                            <p data-members-error></p>
+                        </div>
+                        <p class="login-link">Already have an account? <a href="{{@site.url}}/signin/">Sign in</a></p>
+                    </form>
+                {{/if}}
+
+                <div class="social">
+                    <h4>Follow me, everything is alright</h4>
+                    <p>You can <a href="https://twitter.com/boldlybryan">follow me on twitter</a> or <a href="https://instagram.com/boldlybryan">stalk me on instagram</a> or <a href="https://www.are.na/bryan-king".>rifle through my stash on are.na</a> or <a href="mailto:">send an email?</a></p>
+                    <p>If you're a cool kid, here's my <a href="/rss">RSS feed</a></p>
+                </div>
+                <!--div class="social">
+                    <h4>Greatest Hits</h4>
+                </div-->
+                <!--h3>Bio</h3>
+                <p>Lorem ipsum yada yada</p-->
+
+            </div>
+        </aside>
+    </div>
 
     <footer>
         {{navigation type="secondary"}}

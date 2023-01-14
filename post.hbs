@@ -10,7 +10,7 @@
         <img src="{{img_url feature_image}}" alt="{{feature_image_alt}}">
         <figcaption>{{feature_image_caption}}</figcaption>
     {{/if}}
-    <h1>{{title}}</h1>
+    <h1 class="title">{{title}}</h1>
     {{> "publish-stamp"}}
     {{#has visibility="paid"}}
       <span class="premium-label">Premium</span>
@@ -22,9 +22,7 @@
   </section>
   <section>
   {{#if comments}}
-    <h2>Comments</h2>
-    {{comment_count}}
-    {{comments title="" count=false mode="light"}}
+    {{comments title="Conversation" count=true mode="auto"}}
   {{/if}}
   </section>
 </article>
