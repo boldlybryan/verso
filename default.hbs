@@ -28,21 +28,18 @@
                         </p>
                         {{else}}
                         <p>
-                            Hey {{@member.firstname}}! You have an active account with access to everything on my website. Shoot me a message if you run into any trouble. Thanks! <br> –Bryan
+                            Hey {{@member.firstname}}! I appreciate you joining my website. You've got access to see everything I publish and leave comments whenever you see fit. <a href="mailto:bryan@bryanking.blog">Shoot me a message</a> if you run into any trouble. Thanks! <br> –Bryan
                         </p>
                         {{/if}}
                         <p>Name: {{@member.name}}</p>
                         <p>Email: {{@member.email}}</p>
-                        <p>Status: {{@member.status}}</p>
-                        <p>Member since: {{@member.created_at}}</p>
                         <p><a href="/#/portal/">Edit details</a>, <a href="javascript:" data-members-signout>Sign out</a></p>
                         <!--{{#if @member.avatar_image}}
                             <img src="{{@member.avatar_image}}" />
                         {{else}}
                             <div class="avatar">B</div>
                         {{/if}}-->
-                        
-                    </div>               
+                    </div>
                 {{else}}
                     <form data-members-form="signup">
                         <h4>You've got mail</h4>
@@ -63,9 +60,9 @@
                 {{/if}}
 
                 <div class="social">
-                    <h4>Follow me, everything is alright</h4>
-                    <p>You can <a href="https://twitter.com/boldlybryan">follow me on twitter</a> or <a href="https://instagram.com/boldlybryan">stalk me on instagram</a> or <a href="https://www.are.na/bryan-king".>rifle through my stash on are.na</a> or <a href="mailto:">send an email?</a></p>
-                    <p>If you're a cool kid, here's my <a href="/rss">RSS feed</a></p>
+                    <h4>Get in touch</h4>
+                    <p>You can <a href="https://twitter.com/boldlybryan">follow me on twitter</a> or <a href="https://instagram.com/boldlybryan">stalk me on instagram</a> or <a href="https://www.are.na/bryan-king">rifle through my stash on are.na</a> or <a href="mailto:bryan@bryanking.blog">send an email?</a></p>
+                    <p>If you're into this sort of thing, here's my <a href="/rss">RSS feed</a></p>
                 </div>
                 <!--div class="social">
                     <h4>Greatest Hits</h4>
