@@ -31,20 +31,17 @@
                             Hey {{@member.firstname}}! You have an active account with access to everything on my website. Shoot me a message if you run into any trouble. Thanks! <br> –Bryan
                         </p>
                         {{/if}}
-                            <p>Name: {{@member.name}}</p>
-                            <p>Email: {{@member.email}}</p>
-                            <p>Status: {{@member.status}}</p>
-                            <p>Member since: {{@member.created_at}}</p>
-                            <p><a href="/#/portal/">Edit details</a>, <a href="javascript:" data-members-signout>Sign out</a></p>
-                            <!--{{#if @member.avatar_image}}
-                                <img src="{{@member.avatar_image}}" />
-                            {{else}}
-                                <div class="avatar">B</div>
-                            {{/if}}-->
-                            
-                        </div>
-                        </div>
-                        </div>
+                        <p>Name: {{@member.name}}</p>
+                        <p>Email: {{@member.email}}</p>
+                        <p>Status: {{@member.status}}</p>
+                        <p>Member since: {{@member.created_at}}</p>
+                        <p><a href="/#/portal/">Edit details</a>, <a href="javascript:" data-members-signout>Sign out</a></p>
+                        <!--{{#if @member.avatar_image}}
+                            <img src="{{@member.avatar_image}}" />
+                        {{else}}
+                            <div class="avatar">B</div>
+                        {{/if}}-->
+                        
                     </div>               
                 {{else}}
                     <form data-members-form="signup">
