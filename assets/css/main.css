@@ -1,26 +1,9 @@
-@import './reset.css';
-@import './type.css?v=2';
-@import './post.css';
-@import './ghost.css';
-
-body {
-    background-color: white;
-    padding: 5rem 4rem;
-}
-
-@media screen and (max-width:80rem){
-    body {
-        padding: 2.5rem 2rem;
-    }
-}
-
-a {
-    color: inherit;
+* {
+    box-sizing: border-box;
 }
 
 img {
-    width: 100%;
-    height: auto;
+    max-width: 100%;
 }
 
 iframe {
@@ -29,105 +12,256 @@ iframe {
 	width: 100%;
 }
 
-.site-header {
-    display: flex;
-    flex-direction: column;
-    align-items: baseline;
+html {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #111;
+    background-color: #fff;
 }
 
-.site-header .logo {
-    font-size: 1.5rem;
-    font-weight: 600;
-}
-
-.site-header .nav li {
-    display: block;
-}
-
-.site-header .nav li {
-    margin-top: 0.5rem;
+a {
+    color: #111;
 }
 
 body {
-    display: grid;
-    grid-template-columns: 1fr minmax(422px, 1fr) 1fr 1fr;
-    grid-gap: 1.5rem;
+    padding: 2rem 1rem;
 }
 
-@media screen and (max-width: 64rem){
-    body {
-        grid-template-columns: 1fr minmax(422px,1fr) 1fr;
-        padding: 2rem 1rem;
-    }
-}
-
-@media screen and (max-width: 64rem){
-    body {
-        grid-template-columns: minmax(422px, 1fr) 1fr;
-    }
-}
-
-.site-header {
-    grid-column: 1;
-    grid-row: 1 / -1;
+body > div {
+    display: flex;
+    justify-content: space-between;
 }
 
 main {
-    grid-column: 2 / span 1;
+    max-width: 35rem;
+    width: 100%;
 }
 
-footer {
-    grid-column: 2 / span 2;
-    border-top: 1px solid;
-    padding-top: 1rem;
+aside {
+    flex-basis: 320px;
+    color: #888;
+    border-left: 1px solid #eee;
+    padding-left: 2rem;
+    margin-bottom: 8rem; /*terminates border of sidebar before it intersects border on pagination */
 }
 
-footer li {
-    display: inline-block;
+aside p {
+    font-size: 0.875rem;
 }
 
-footer .nav li:not(:last-of-type) {
-    margin-right: 1rem;
+aside a,
+.site-header a {
+    color: #888;
 }
 
-@media screen and (max-width: 64rem){
-    .site-header {
-        grid-column: 1 / -1;
-        grid-row: 1;
-    }
-
-    main {
-        grid-column: 1 ;
-    }
-
-    footer {
-        grid-column: 1 / span 2;
-    }
-}
-
-@media screen and (max-width: 45rem){
-    body {
-        grid-template-columns: 1fr;
-    }
-}
-
-.index .post:not(:first-of-type){
-    margin-top: 4rem;
-}
-
-.index .post .meta {
-    margin: 0.25rem 0 1rem 0;
-} 
-
-.index .post .permalink {
-    display: block;
-    margin-top: 1rem;
-}
-
-.pagination {
-    margin-top: 2rem;
+aside a:hover,
+.site-header a:hover {
+    color: blue;
 }
 
 .content {
-    margin-top: 0.5rem;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+    line-height: 1.35;
+}
+
+.content p,
+.content blockquote,
+.content ul,
+.content ol {
+    font-family: 'Georgia', serif;
+}
+
+figcaption {
+    text-align: center;
+    opacity: 0.65;
+    font-size: 0.875rem;
+}
+
+blockquote {
+    border-left: 2px solid #ccc;
+    padding: 1rem;
+    margin: 0 1rem;
+}
+
+.title {
+    margin-bottom: 0.125rem;
+}
+
+.post:not(:first-of-type){
+    padding-top: 2rem;
+    margin-top: 4rem;
+    border-top: 1px solid #bbb;
+}
+
+hr {
+    border: none;
+}
+
+hr:after {
+    content: "\2666\2666\2666";
+    display: block;
+    font-size: 1.5rem;
+    margin: 1rem auto;
+    text-align: center;
+    color: #ccc;
+}
+
+.site-header .container {
+    align-items: baseline;
+}
+
+.site-header ul.nav {
+    list-style-type: none;
+    padding: 0;
+    padding-left: 1rem;
+    margin-left: 1rem;
+    border-left: 1px solid #eee;
+}
+
+.site-header ul.nav li {
+    display: inline-block;
+}
+
+.site-header ul.nav li:not(:first-of-type) {
+    margin-left: 0.5rem;
+}
+
+@media screen and (max-width: 40rem){
+    .site-header .container {
+        flex-direction: column;
+    }
+    .site-header ul.nav li {
+        display: block;
+    }
+    .site-header ul.nav li:not(:first-of-type) {
+        margin-top: 0.25rem;
+        margin-left: 0;
+    }
+}
+
+.container {
+    display: flex;
+    max-width: 60rem;
+    width: 100%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.signup-box input {
+    display: block;
+    width: 100%;
+    max-width: 30ch;
+    padding: 0.25rem;
+    border-radius: 0;
+    border: 1px solid #ccc;
+    margin-bottom: 0.5rem;
+}
+
+.signup-box button {
+    display: block;
+    padding: 0.25rem .50rem;
+    border-radius: 0;
+    border: 1px solid #ccc;
+    margin-top: 0.75rem;
+}
+
+.signup-box label {
+    display: inline-block;
+    font-size: 0.75rem;
+    margin-bottom: 0.25rem;
+}
+
+[data-members-form] {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 1rem;
+}
+
+[data-members-form] h4 {
+    margin: 0; 
+}
+
+[data-members-form] p:first-of-type {
+    font-size: 0.875rem;
+    margin: 0.5rem 0;
+}
+
+[data-members-form] .login-link {
+    font-size: 0.75rem;
+}
+
+[data-members-form="signup"].loading .signup-box {
+    opacity: 0.5;
+}
+
+[data-members-form="signup"].success .signup-box {
+    display: none;
+}
+
+[data-members-form="signup"] .message-box {
+    display: none;
+}
+
+[data-members-form="signup"].success .login-link {
+    display: none;
+}
+
+[data-members-form="signup"].success .message-box,
+[data-members-form="signup"].error .message-box {
+    display: block;
+}
+
+[data-members-form="signup"].success .message-box {
+    color: darkgreen;
+}
+
+[data-members-form="signup"] .message-box .success-message {
+    display: none;
+}
+
+[data-members-form="signup"].success .message-box .success-message {
+    display: block;
+}
+
+[data-members-form="signup"].error input {
+    border: 1px solid darkred;
+}
+
+[data-members-error]{
+    color: darkred;
+}
+
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1rem;
+    margin-top: 5rem;
+    border-top: 1px solid #eee;
+    color: #888
+}
+
+.pagination a {
+    color: #888;
+}
+
+.pagination div {
+    width: 120px;
+}
+.pagination div:last-of-type {
+    text-align: right;
+}
+
+aside .social {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+}
+
+aside .social p {
+    margin: 0.5rem 0;
+}
+
+aside .social h4 {
+    margin: 0;
 }
