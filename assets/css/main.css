@@ -274,3 +274,7 @@ aside .social h4 {
 .kg-width-full {
     width: 100%;
 }
+
+.post .content li {
+    margin-bottom: 1rem;
+}
