@@ -2,6 +2,12 @@
 
 <main>
 
+{{#if @member}}
+  <p>You're already signed in!</p>
+{{else}}
     {{> 'sign-up-form'}}
+{{/if}}
+
+
 
 </main>
