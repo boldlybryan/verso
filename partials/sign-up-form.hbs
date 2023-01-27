@@ -1,0 +1,39 @@
+{{#if @member}}
+    <h4>Manage your account</h4>
+    <div class="subscription">
+        {{#if cancel_at_period_end}}
+        <p>
+            <strong class="subscription-expiration-warning">Your subscription will expire on {{date current_period_end format="DD MMM YYYY"}}.</strong> If you change your mind in the mean time you can turn auto-renew back on to continue your subscription.
+        </p>
+        {{else}}
+        <p>
+            Hey {{@member.firstname}}! I appreciate you joining my website. You've got access to see everything I publish and leave comments whenever you see fit. <a href="mailto:bryan@bryanking.blog">Shoot me a message</a> if you run into any trouble. Thanks! <br> –Bryan
+        </p>
+        {{/if}}
+        <p>Name: {{@member.name}}</p>
+        <p>Email: {{@member.email}}</p>
+        <p><a href="/#/portal/">Edit details</a>, <a href="javascript:" data-members-signout>Sign out</a></p>
+        <!--{{#if @member.avatar_image}}
+            <img src="{{@member.avatar_image}}" />
+        {{else}}
+            <div class="avatar">B</div>
+        {{/if}}-->
+    </div>
+{{else}}
+    <form data-members-form="signup">
+        <h4>You've got mail</h4>
+        <p>Get email notifications whenever I publish something new. Definitely not a newsletter.</p>
+        <div class="signup-box">
+            <label for="">Name</label>
+            <input data-members-name type="name" placeholder="Your name..." required="true" autocomplete="false" />
+            <label for="">Email Address</label>
+            <input data-members-email type="email" placeholder="Type your email..." required="true" autocomplete="false" />
+            <button type="submit">Continue</button>
+        </div>
+        <div class="message-box">
+            <p class="success-message">It worked! Check the email you provided to confirm your subscription.</p>
+            <p data-members-error></p>
+        </div>
+        <p class="login-link">Already have an account? <a href="{{@site.url}}/signin/">Sign in</a></p>
+    </form>
+{{/if}}
