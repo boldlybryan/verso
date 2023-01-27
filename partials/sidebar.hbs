@@ -12,6 +12,21 @@
         </div-->
         <!--h3>Bio</h3>
         <p>Lorem ipsum yada yada</p-->
-
+        {{#get "posts" filter="featured:true"}}         
+            <div>
+                <h4>Greatest Hits</h4>
+                {{! Loop through our featured posts }}
+                {{#foreach posts}}
+                    <div>
+                        <p><a href="{{url}}">{{title}}</a></p>
+                    </div>
+                {{else}}
+                {{! If there are no featured posts}}
+                <p>No posts!</p>
+                {{/foreach}}
+                {{else}}
+                <p class="error">{{error}}</p>
+            </div>
+        {{/get}}
     </div>
 </aside>
