@@ -1,3 +1,23 @@
+:root {
+    --fg: #111;
+    --bg: #fff;
+    --mid1: #888;
+    --mid2: #bbb;
+    --mid3: #ccc;
+    --mid4: #eee;
+}
+
+@media screen and (prefers-color-scheme:dark){
+    :root{
+        --fg:#eee;
+        --bg:#111;
+        --mid1: #aaa;
+        --mid2: #555;
+        --mid3: #444;
+        --mid4: #222;
+    }
+}
+
 * {
     box-sizing: border-box;
 }
@@ -17,12 +37,12 @@ html {
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
     font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: #111;
-    background-color: #fff;
+    color: var(--fg);
+    background-color: var(--bg);
 }
 
 a {
-    color: #111;
+    color: var(--fg);
 }
 
 body {
@@ -41,8 +61,8 @@ main {
 
 aside {
     flex-basis: 320px;
-    color: #888;
-    border-left: 1px solid #eee;
+    color: var(--mid1);
+    border-left: 1px solid var(--mid4);
     padding-left: 2rem;
     margin-bottom: 8rem; /*terminates border of sidebar before it intersects border on pagination */
 }
@@ -53,7 +73,7 @@ aside p {
 
 aside a,
 .site-header a {
-    color: #888;
+    color: var(--mid1);
 }
 
 aside a:hover,
@@ -93,7 +113,7 @@ blockquote {
 .post:not(:first-of-type){
     padding-top: 2rem;
     margin-top: 4rem;
-    border-top: 1px solid #bbb;
+    border-top: 1px solid var(--mid2);
 }
 
 hr {
@@ -101,12 +121,12 @@ hr {
 }
 
 hr:after {
-    content: "\2666\2666\2666";
+    content: "\2217\2217\2217";
     display: block;
-    font-size: 1.5rem;
+    font-size: 1rem;
     margin: 1rem auto;
     text-align: center;
-    color: #ccc;
+    color: var(--mid1);
 }
 
 .site-header .container {
@@ -118,7 +138,7 @@ hr:after {
     padding: 0;
     padding-left: 1rem;
     margin-left: 1rem;
-    border-left: 1px solid #eee;
+    border-left: 1px solid var(--mid4);
 }
 
 .site-header ul.nav li {
@@ -156,7 +176,7 @@ hr:after {
     max-width: 30ch;
     padding: 0.25rem;
     border-radius: 0;
-    border: 1px solid #ccc;
+    border: 1px solid var(--mid3);
     margin-bottom: 0.5rem;
 }
 
@@ -164,7 +184,7 @@ hr:after {
     display: block;
     padding: 0.25rem .50rem;
     border-radius: 0;
-    border: 1px solid #ccc;
+    border: 1px solid var(--mid3);
     margin-top: 0.75rem;
 }
 
@@ -175,7 +195,7 @@ hr:after {
 }
 
 [data-members-form] {
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid var(--mid4);
     padding-bottom: 1rem;
 }
 
@@ -238,12 +258,12 @@ hr:after {
     justify-content: space-between;
     padding-top: 1rem;
     margin-top: 5rem;
-    border-top: 1px solid #eee;
-    color: #888
+    border-top: 1px solid var(--mid4);
+    color: var(--mid1)
 }
 
 .pagination a {
-    color: #888;
+    color: var(--mid1);
 }
 
 .pagination div {
@@ -254,7 +274,7 @@ hr:after {
 }
 
 aside .social {
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid var(--mid4);
     padding-bottom: 1rem;
     padding-top: 1rem;
 }
