@@ -298,3 +298,17 @@ aside .social h4 {
 .post .content li {
     margin-bottom: 1rem;
 }
+
+.page-photography main{
+    max-width: 80rem;
+}
+
+.page-photography .post .content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(20rem,1fr));
+    grid-gap: 1rem;
+}
+
+.page-photography .post .content .kg-card {
+    margin: 0;
+}
