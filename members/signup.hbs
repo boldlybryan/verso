@@ -2,25 +2,6 @@
 
 <main>
 
-    {{#if @member.paid}}
-
-        {{!-- Logged in, paying member: Redirect home --}}
-        <script>window.location = '{{@site.url}}';</script>
-
-    {{else}}
-
-        {{!-- Not logged in: Sign up --}}
-        <form data-members-form="signup">
-            <h1>Signup to {{@site.title}}</h1>
-            <p>{{@site.description}}</p>
-            <div class="signup-box">
-                <input data-members-email type="email" placeholder="Type your email..." required="true" autocomplete="false" />
-                <button type="submit">Continue</button>
-            </div>
-            <p data-members-error></p>
-            <p>Already have an account? <a href="{{@site.url}}/signin/">Sign in</a></p>
-        </form>
-
-    {{/if}}
+    {{> 'sign-up-form'}}
 
 </main>

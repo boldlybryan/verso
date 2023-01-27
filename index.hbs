@@ -1,23 +1,26 @@
 {{!< default}}
 
-<div class="index">
-  <!-- This is the post loop - each post will be output using this markup -->
-  {{#foreach posts}}
-  <article class="{{post_class}} {{visibility}}">
-    {{#if feature_image}}
-        <img src="{{img_url feature_image}}">
-        <figcaption>{{feature_image_caption}}</figcaption>
-    {{/if}}
-    <h2 class="title"><a href="{{url}}">{{title}}</a></h2>
-    {{> "publish-stamp"}}
-    {{#has visibility="paid"}}
-      <span class="premium-label">Premium</span>
-    {{/has}}
-    <section class="content">
-        {{content}}
-        <a href="{{url}}" class="permalink">Permalink</a>
-    </section>
-  </article>
-  {{/foreach}}
-</div>
-{{pagination}}
+<main>
+  <div class="index">
+    <!-- This is the post loop - each post will be output using this markup -->
+    {{#foreach posts}}
+    <article class="{{post_class}} {{visibility}}">
+      {{#if feature_image}}
+          <img src="{{img_url feature_image}}">
+          <figcaption>{{feature_image_caption}}</figcaption>
+      {{/if}}
+      <h2 class="title"><a href="{{url}}">{{title}}</a></h2>
+      {{> "publish-stamp"}}
+      {{#has visibility="paid"}}
+        <span class="premium-label">Premium</span>
+      {{/has}}
+      <section class="content">
+          {{content}}
+          <a href="{{url}}" class="permalink">Permalink</a>
+      </section>
+    </article>
+    {{/foreach}}
+  </div>
+  {{pagination}}
+</main>
+{{> 'sidebar'}}

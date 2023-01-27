@@ -1,19 +1,22 @@
 {{!< default}}
 
-{{#page}}
+<main>
+  {{#page}}
 
-<article class="{{post_class}}">
-  <header>
-    <h1>{{title}}</h1>
-  </header>
-  <section class="content">
-    {{content}}
-  </section>
-  <section>
-  {{#if comments}}
-    {{comments title="Conversation" count=true mode="auto"}}
-  {{/if}}
-  </section>
-</article>
+  <article class="{{post_class}}">
+    <header>
+      <h1>{{title}}</h1>
+    </header>
+    <section class="content">
+      {{content}}
+    </section>
+    <section>
+    {{#if comments}}
+      {{comments title="Conversation" count=true mode="auto"}}
+    {{/if}}
+    </section>
+  </article>
 
-{{/page}}
+  {{/page}}
+</main>
+{{> 'sidebar'}}
